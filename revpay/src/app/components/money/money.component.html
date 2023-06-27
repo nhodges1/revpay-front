@@ -1,33 +1,42 @@
 <h2>Send Money</h2>
-<form #sendForm="ngForm" (ngSubmit)="onSubmit(sendForm)">
-  <div>
-    <label for="sender">Sender:</label>
-    <input type="text" id="sender" name="sender" ngModel required>
-  </div>
-  <div>
-    <label for="receiver">Receiver:</label>
-    <input type="text" id="receiver" name="receiver" ngModel required>
-  </div>
-  <div>
-    <label for="amount">Amount:</label>
-    <input type="number" id="amount" name="amount" step="0.01" ngModel required>
-  </div>
-  <button type="submit">Send</button>
-</form>
+<div>
+  <form #sendForm="ngForm" (ngSubmit)="onSubmit(sendForm)">
+    <div class="form-group">
+      <label for="receiver">Send To:</label>
+      <input type="text" class="form-control" id="receiver" aria-describedby="username" placeholder="Enter Accountholder" name="receiver" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="number" class="form-control" id="amount" aria-describedby="username" placeholder="Enter Amount" name="amount" step="0.01" ngModel required>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
 
-<h2>Request Money</h2>
-<form #requestForm="ngForm" (ngSubmit)="onSubmit1(requestForm)">
-  <div>
-    <label for="sender">Sender:</label>
-    <input type="text" id="sender" name="sender" ngModel>
-  </div>
-  <div>
-    <label for="receiver">Receiver:</label>
-    <input type="text" id="receiver" name="receiver" ngModel>
-  </div>
-  <div>
-    <label for="amount">Amount:</label>
-    <input type="number" id="amount" name="amount" step="0.01" ngModel>
-  </div>
-  <button type="submit">Request</button>
-</form>
+  <h2>Request Money</h2>
+  <form #requestForm="ngForm" (ngSubmit)="onSubmit1(requestForm)">
+    <div class="form-group">
+      <label for="receiver">Request From:</label>
+      <input type="text" class="form-control" id="receiver" aria-describedby="username" placeholder="Enter Accountholder" name="receiver" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="number" class="form-control" id="amount" aria-describedby="username" placeholder="Enter Amount" name="amount" step="0.01" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Request</button>
+  </form>
+</div>
+
+<!-- <div>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Enter Username" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter Password">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">Login</button>
+  </form>
+</div>
+-->

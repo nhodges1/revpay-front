@@ -25,18 +25,33 @@
 <div class="addCard">
     <h2>Add Card</h2>
 <form>
-  <div>
+  <div class="form-group">
     <label for="number">Card Number</label>
-    <input type="text" id="password" name="password" ngModel required>
+    <input type="text" class="form-control" id="password" aria-describedby="username" placeholder="Enter Username" name="password" ngModel required>
   </div>
-  <div>
+  <div class="form-group">
     <label for="expiration">Expiration Date</label>
-    <input type="text" id="expiration" name="expiration" ngModel required>
+    <input type="text" class="form-control" id="expiration" aria-describedby="username" placeholder="Enter Username" name="expiration" ngModel required>
   </div>
-  <div>
+  <div class="form-group">
     <label for="security">Security Number</label>
-    <input type="text" id="security" name="security" ngModel required>
+    <input type="text" class="form-control" id="security" aria-describedby="username" placeholder="Enter Username" name="security" ngModel required>
   </div>  
-  <button type="submit">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
+
+<!-- <div>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Enter Username" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter Password">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">Login</button>
+  </form>
+</div>
+-->

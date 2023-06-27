@@ -6,13 +6,23 @@
 .navbar-brand {
     font-weight: bold;
     font-size: 2em;
-    color: white; /* Change color as per your preference */
+    color: white; 
+}
+
+#navbarNav ul {
+    text-align: right;
+}
+
+.nav-item li {
+    display: inline-block;
 }
 
 .nav-item a {
     font-size: 1.3em;
-    color: #708090; /* Change color as per your preference */
+    color: white; 
     margin-left: 20px;
+    text-align: right;
+    display: block;
 }
 
 .nav-item a:hover {

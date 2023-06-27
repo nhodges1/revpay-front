@@ -1,27 +1,29 @@
-<h2>Transactions</h2>
-<div *ngIf="transactions && transactions.length">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Sender</th>
-        <th>Receiver</th>
-        <th>Amount</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let transaction of transactions">
-        <td>{{transaction.id}}</td>
-        <td>{{transaction.sender}}</td>
-        <td>{{transaction.receiver}}</td>
-        <td>{{transaction.amount}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<section>
+  <h2>Transactions</h2>
+  <div *ngIf="transactions && transactions.length">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Sender</th>
+          <th>Receiver</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{transaction.id}}</td>
+          <td>{{transaction.sender}}</td>
+          <td>{{transaction.receiver}}</td>
+          <td>{{transaction.amount}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<h2>Send Money</h2>
+<!-- <h2>Send Money</h2>
 <form #transferForm="ngForm" (ngSubmit)="onSubmit(transferForm)">
   <div>
     <label for="receiver">Receiver Username</label>
@@ -33,3 +35,4 @@
   </div>
   <button type="submit" [disabled]="!transferForm.form.valid">Send Money</button>
 </form>
+-->

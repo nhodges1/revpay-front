@@ -9,10 +9,9 @@ export class AppComponent {
   title = 'revpay-front';
 
   navItems = [
-    { name: 'Accounts', path: 'accounts' },
-    { name: 'Transactions', path: 'transactions' },
-    { name: 'Register', path: 'register' }, // new
+    { name: 'Register', path: 'register' },
     { name: 'Login', path: 'login' }, // new
     { name: 'Money', path: 'money' }, // new
+    { name: 'Transactions', path: 'transactions' }
   ];
 }
