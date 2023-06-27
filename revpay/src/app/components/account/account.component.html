@@ -1,1 +1,42 @@
-<p>account works!</p>
+<h2>Accounts</h2>
+<div *ngIf="accounts && accounts.length">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td>{{account.id}}</td>
+        <td>{{account.username}}</td>
+        <td>{{account.email}}</td>
+        <td>{{account.phone}}</td>
+        <td>{{account.balance}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="addCard">
+    <h2>Add Card</h2>
+<form>
+  <div>
+    <label for="number">Card Number</label>
+    <input type="text" id="password" name="password" ngModel required>
+  </div>
+  <div>
+    <label for="expiration">Expiration Date</label>
+    <input type="text" id="expiration" name="expiration" ngModel required>
+  </div>
+  <div>
+    <label for="security">Security Number</label>
+    <input type="text" id="security" name="security" ngModel required>
+  </div>  
+  <button type="submit">Submit</button>
+</form>
+</div>
